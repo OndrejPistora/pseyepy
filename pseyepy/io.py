@@ -161,8 +161,6 @@ class Stream():
 
         if self.file_name is not None:
             self.w = Writer(klass=writer_class, que=self.ques['file'], movie_params=movie_params)
-        if display:
-            d = Display(lambda: self.ques['display'].get(block=False))
 
     def end(self):
         self.cd.end()
@@ -172,7 +170,7 @@ class Stream():
 class Writer(threading.Thread):
     """Continually reads from a queue and writes to a file
     """
-    DEFAULT_WRITER_CLASS = FFMpegWriter # or OpencvWriter
+    DEFAULT_WRITER_CLASS = OpencvWriter # FFMpegWriter or OpencvWriter
     def __init__(self, klass, que, movie_params={}):
         super().__init__()
    

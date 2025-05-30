@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "cython", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pseyepy"
+version = "0.0.2"
+authors = [
+  { name="Ben Deverett", email="deverett@princeton.edu" },
+]
+description = "pseyepy camera package"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["cython==3.0.11", "Pillow", "h5py", "opencv-python"]
+
+license = "MIT"
+license-files = ["LICENSE"]
