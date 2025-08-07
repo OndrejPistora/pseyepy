@@ -143,3 +143,17 @@ s.end()
   * more documentation
   * build a multithreaded cython option for camera streaming to free the main process
   * importantly: without a threading implementation, Stream to file with cameras of different framerates will result in lowest for all
+
+### Ondra
+
+install
+
+```
+uv venv --python /usr/local/bin/python3
+uv pip install -e .
+```
+
+then run (vith venv activated)
+```
+python -u "display.py"
+```
